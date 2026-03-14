@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="一个适合先上传到 GitHub、后续逐步完善的个人主页模板。">
+  <title>你的名字 | 个人主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav class="top-nav" aria-label="主导航">
+        <a href="pages/about.html">关于我</a>
+        <a href="pages/projects.html">项目作品</a>
+        <a href="pages/journey.html">学习路径</a>
+        <a href="pages/contact.html">联系方式</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-banner">
+        <figure class="hero-stage">
+          <img class="hero-art hero-art-wide" src="assets/hero-art.svg" alt="抽象风格主视觉图片">
+          <figcaption class="hero-overlay glass-panel">
+            <p class="eyebrow">PERSONAL LANDING PAGE</p>
+            <h1>先用一张大图建立印象，再把内容拆成四个清晰入口。</h1>
+            <p class="lead">
+              这个版本适合先上传 GitHub。你只需要先替换姓名、简介、主图和四个分区名称，
+              后面再逐步把每个子页面补成完整作品集或简历站。
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#overview">查看主页结构</a>
+              <a class="button ghost" href="pages/about.html">先看子页面</a>
+            </div>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="overview-section" id="overview">
+        <article class="intro-panel glass-panel">
+          <p class="eyebrow">LEFT PANEL</p>
+          <h2>这里放你的核心介绍，不要一开始就写太满。</h2>
+          <p>
+            建议先保留 80 到 120 字，说明你是谁、正在做什么、希望别人通过这个网站看到什么。
+            如果你目前还没准备好完整简历，这块就先写最稳定的信息。
+          </p>
+
+          <div class="identity-block">
+            <span class="identity-tag">PROFILE SNAPSHOT</span>
+            <h3>你的名字 / Your Name</h3>
+            <p>
+              例：计算机相关专业学生，正在整理项目作品、课程记录和个人表达。
+              这个网站会持续更新，逐步从简单主页扩展成完整的个人展示站点。
+            </p>
+          </div>
+
+          <div class="chip-row" aria-label="个人关键词">
+            <span class="chip">可先上传 GitHub</span>
+            <span class="chip">后续持续完善</span>
+            <span class="chip">静态页面易维护</span>
+          </div>
+
+          <div class="note-card">
+            <p class="note-title">第一轮建议优先修改</p>
+            <ol class="priority-list">
+              <li>把主图换成你自己的图片或作品图。</li>
+              <li>把“你的名字”和简介改成真实内容。</li>
+              <li>按你的需要重命名右侧四个分区。</li>
+            </ol>
+          </div>
+        </article>
+
+        <section class="portal-grid" aria-label="四个分区入口">
+          <a class="portal-card tone-1" href="pages/about.html">
+            <span class="portal-index">01</span>
+            <h3>关于我</h3>
+            <p>放个人定位、技能关键词、自我介绍和一段简短故事。</p>
+            <span class="portal-link">进入页面</span>
+          </a>
+
+          <a class="portal-card tone-2" href="pages/projects.html">
+            <span class="portal-index">02</span>
+            <h3>项目作品</h3>
+            <p>把课程项目、练习作品、比赛经历和成果截图集中展示。</p>
+            <span class="portal-link">进入页面</span>
+          </a>
+
+          <a class="portal-card tone-3" href="pages/journey.html">
+            <span class="portal-index">03</span>
+            <h3>学习路径</h3>
+            <p>记录你在学习什么、走到哪一步，以及准备继续补什么。</p>
+            <span class="portal-link">进入页面</span>
+          </a>
+
+          <a class="portal-card tone-4" href="pages/contact.html">
+            <span class="portal-index">04</span>
+            <h3>联系方式</h3>
+            <p>放邮箱、GitHub、社交账号，或者一个简单合作说明。</p>
+            <span class="portal-link">进入页面</span>
+          </a>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Static site for GitHub Pages · 先上线，再慢慢补内容。</p>
+    </footer>
+  </div>
+</body>
+</html>
