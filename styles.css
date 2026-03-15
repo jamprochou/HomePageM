@@ -449,6 +449,58 @@ a {
   gap: 1rem;
 }
 
+.preview-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.preview-frame-shell {
+  margin: 1rem 0 0;
+  padding: 1rem;
+  border-radius: calc(var(--radius-xl) + 4px);
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  background:
+    linear-gradient(145deg, rgba(13, 106, 103, 0.12), rgba(255, 250, 243, 0.92) 45%, rgba(199, 87, 50, 0.12));
+  box-shadow: var(--shadow);
+  animation: drift-in 0.8s ease both;
+}
+
+.preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+  padding: 0.25rem 0.25rem 0;
+}
+
+.preview-toolbar a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.preview-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.54);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.preview-frame {
+  display: block;
+  width: 100%;
+  min-height: 78vh;
+  border: 0;
+  border-radius: 28px;
+  background: #ffffff;
+}
+
 .info-card h2 {
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
@@ -561,5 +613,14 @@ a {
 
   .portal-card {
     min-height: 198px;
+  }
+
+  .preview-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .preview-frame {
+    min-height: 68vh;
   }
 }
