@@ -10,58 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="projects-page preview-page">
-  <div class="subpage-shell">
-    <header class="site-header">
-      <a class="brand" href="../index.html">粥酱喵</a>
-      <nav class="top-nav" aria-label="主导航">
-        <a href="../index.html">首页</a>
-        <a href="about.html">关于我</a>
-        <a href="projects.html">收集</a>
-        <a href="journey.html">路径</a>
-        <a href="contact.html">联系</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="subpage-hero">
-        <div class="subpage-hero-copy glass-panel">
-          <p class="eyebrow">NOTE PREVIEW</p>
-          <h1>PDE 笔记 1</h1>
-          <p class="subpage-lead">
-            这个页面只负责站内预览，实际内容仍然来自原始
-            <code>PDEnote1.html</code>，不会被主页样式覆盖。
-          </p>
-          <div class="hero-inline-actions">
-            <a class="button" href="projects.html">返回收集</a>
-            <a class="button ghost" href="../resources/notes/PDEnote1.html" target="_blank" rel="noopener noreferrer">打开原始页面</a>
-          </div>
-        </div>
-
-        <article class="info-card preview-meta">
-          <h2>预览说明</h2>
-          <ul class="plain-list">
-            <li>站内显示使用独立 iframe，和主页 CSS 隔离。</li>
-            <li>如果需要全屏查看或下载，请直接打开原始页面。</li>
-            <li>这个页面不改动笔记内容，只改变展示方式。</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="preview-frame-shell">
-        <div class="preview-toolbar">
-          <span class="preview-pill">资源：PDE Note 1</span>
-          <a href="../resources/notes/PDEnote1.html" target="_blank" rel="noopener noreferrer">新标签打开</a>
-        </div>
-        <iframe
-          class="preview-frame"
-          src="../resources/notes/PDEnote1.html"
-          title="PDE 笔记 1 站内预览"
-          loading="eager"
-          referrerpolicy="no-referrer"
-        ></iframe>
-      </section>
-    </main>
+<body class="preview-page">
+  <div class="preview-app">
+    <div class="preview-app-controls">
+      <a class="button" href="projects.html">返回收集</a>
+      <a class="button ghost" href="../resources/notes/PDEnote1.html" target="_blank" rel="noopener noreferrer">打开原始页面</a>
+    </div>
+    <iframe
+      class="preview-app-frame"
+      src="../resources/notes/PDEnote1.html"
+      title="PDE 笔记 1 站内预览"
+      loading="eager"
+      referrerpolicy="no-referrer"
+    ></iframe>
   </div>
 </body>
 </html>
