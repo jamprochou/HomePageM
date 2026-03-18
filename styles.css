@@ -449,6 +449,106 @@ a {
   gap: 1rem;
 }
 
+.school-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.school-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  padding: 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 1px solid rgba(24, 31, 36, 0.1);
+  box-shadow: var(--shadow);
+  color: #fff8f0;
+  background-color: #2f3d45;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  animation: rise-in 0.85s ease both;
+}
+
+.school-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17, 24, 29, 0.22) 0%, rgba(17, 24, 29, 0.58) 55%, rgba(17, 24, 29, 0.78) 100%);
+}
+
+.school-card::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0.82;
+  background: radial-gradient(circle, rgba(255, 248, 239, 0.92), rgba(255, 248, 239, 0));
+}
+
+.school-card:hover,
+.school-card:focus-visible {
+  transform: translateY(-6px);
+  border-color: rgba(199, 87, 50, 0.28);
+  box-shadow: 0 24px 48px rgba(40, 31, 20, 0.18);
+}
+
+.school-card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0.6rem 0 0;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-family: "Noto Serif SC", serif;
+}
+
+.school-card-meta,
+.school-card-description,
+.school-card-link {
+  position: relative;
+  z-index: 1;
+}
+
+.school-card-meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(255, 248, 240, 0.84);
+}
+
+.school-card-description {
+  margin: 0.9rem 0 1.1rem;
+  color: rgba(255, 248, 240, 0.9);
+  line-height: 1.8;
+}
+
+.school-card-link {
+  margin-top: auto;
+  font-weight: 700;
+}
+
+.school-card-snnu {
+  background-image: linear-gradient(180deg, rgba(25, 33, 38, 0.18) 0%, rgba(25, 33, 38, 0.62) 100%), url("assets/SNNU.jpg");
+}
+
+.school-card-xjtu {
+  background-image: linear-gradient(180deg, rgba(20, 29, 36, 0.18) 0%, rgba(20, 29, 36, 0.62) 100%), url("assets/XJTU.jpg");
+}
+
+.school-card .section-tag {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 248, 240, 0.88);
+}
+
 .info-card h2 {
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
@@ -456,6 +556,70 @@ a {
 
 .plain-list li + li {
   margin-top: 0.65rem;
+}
+
+.resource-panel {
+  grid-column: 1 / -1;
+}
+
+.resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.resource-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(24, 31, 36, 0.08);
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.resource-copy h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.04rem;
+  font-family: "Noto Serif SC", serif;
+}
+
+.resource-copy p,
+.empty-state p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.resource-actions a {
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.resource-actions a:hover,
+.resource-actions a:focus-visible {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(199, 87, 50, 0.3);
+}
+
+.empty-state {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px dashed rgba(24, 31, 36, 0.18);
+  background: rgba(255, 255, 255, 0.38);
 }
 
 .page-links {
@@ -481,6 +645,16 @@ a {
 .projects-page {
   --accent: #965032;
   --accent-2: #125b71;
+}
+
+.snnu-page {
+  --accent: #8f5436;
+  --accent-2: #2b6a5c;
+}
+
+.xjtu-page {
+  --accent: #7f4332;
+  --accent-2: #345f80;
 }
 
 .journey-page {
@@ -520,7 +694,8 @@ a {
 @media (max-width: 960px) {
   .overview-section,
   .subpage-hero,
-  .content-grid {
+  .content-grid,
+  .school-grid {
     grid-template-columns: 1fr;
   }
 
@@ -533,6 +708,10 @@ a {
     position: static;
     width: 100%;
     margin-top: 1rem;
+  }
+
+  .resource-item {
+    flex-direction: column;
   }
 }
 
