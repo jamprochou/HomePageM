@@ -62,12 +62,24 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
   font-family: "Noto Serif SC", serif;
   font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
   text-decoration: none;
+}
+
+.brand-mark {
+  height: 36px;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.brand-name {
+  display: inline-block;
 }
 
 .top-nav {
