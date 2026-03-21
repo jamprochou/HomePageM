@@ -469,7 +469,7 @@ a {
 
 .school-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -559,6 +559,14 @@ a {
 
 .school-card-xjtu {
   background-image: linear-gradient(180deg, rgba(20, 29, 36, 0.18) 0%, rgba(20, 29, 36, 0.62) 100%), url("assets/XJTU.webp");
+}
+
+.school-card-links {
+  background-image:
+    linear-gradient(180deg, rgba(34, 39, 49, 0.2) 0%, rgba(34, 39, 49, 0.62) 100%),
+    radial-gradient(circle at 18% 18%, rgba(255, 241, 214, 0.34), transparent 26%),
+    radial-gradient(circle at 82% 22%, rgba(214, 234, 255, 0.26), transparent 24%),
+    linear-gradient(135deg, #7f4332 0%, #9e6736 45%, #2b5f78 100%);
 }
 
 .school-card .section-tag {
@@ -673,6 +681,11 @@ a {
 .xjtu-page {
   --accent: #7f4332;
   --accent-2: #345f80;
+}
+
+.links-page {
+  --accent: #8a4f37;
+  --accent-2: #2b5f78;
 }
 
 .journey-page {
