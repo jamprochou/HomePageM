@@ -563,15 +563,15 @@ a {
 
 .school-card-links {
   background-image:
-    linear-gradient(180deg, rgba(31, 25, 20, 0.06) 0%, rgba(31, 25, 20, 0.4) 100%),
-    radial-gradient(circle at 22% 18%, rgba(255, 225, 172, 0.3), transparent 30%),
+    linear-gradient(180deg, rgba(31, 25, 20, 0.03) 0%, rgba(31, 25, 20, 0.28) 100%),
+    radial-gradient(circle at 22% 18%, rgba(255, 229, 184, 0.38), transparent 32%),
     url("assets/links-card.webp");
   background-position: center 42%;
   background-color: #2f241a;
 }
 
 .school-card-links::before {
-  background: linear-gradient(180deg, rgba(17, 24, 29, 0.1) 0%, rgba(17, 24, 29, 0.38) 55%, rgba(17, 24, 29, 0.56) 100%);
+  background: linear-gradient(180deg, rgba(17, 24, 29, 0.06) 0%, rgba(17, 24, 29, 0.26) 55%, rgba(17, 24, 29, 0.42) 100%);
 }
 
 .school-card .section-tag {
