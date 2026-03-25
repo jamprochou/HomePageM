@@ -10,7 +10,7 @@
 - `pages/about.html`：关于我
 - `pages/projects.html`：项目作品
 - `pages/journey.html`：寻径页
-- `pages/contact.html`：联系方式
+- `pages/contact.html`：联 系页
 
 ## 适合第一轮先改的内容
 
