@@ -9,7 +9,7 @@
 - `assets/hero-art.svg`：当前主视觉图片
 - `pages/about.html`：关于我
 - `pages/projects.html`：项目作品
-- `pages/journey.html`：学习路径
+- `pages/journey.html`：寻径页
 - `pages/contact.html`：联系方式
 
 ## 适合第一轮先改的内容
