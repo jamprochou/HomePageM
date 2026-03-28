@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="常用站点和文章链接专题页，用于集中整理常看的工具站、教程文章和外部资源。">
+  <meta name="description" content="数学站点与文章链接专题页，集中整理博客、讲义、课程主页与专题资源。">
   <title>站点 / 文章 | 粥酱喵</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/favicon.png?v=20260320b">
-  <link rel="stylesheet" href="../styles.css?v=20260321a">
+  <link rel="stylesheet" href="../styles.css?v=20260328b">
 </head>
 <body class="projects-page links-page">
   <div class="subpage-shell">
@@ -32,10 +32,11 @@
           <p class="eyebrow">LINK COLLECTION</p>
           <h1>站点 / 文章</h1>
           <p class="subpage-lead">
-            这一页用于集中整理以后会反复打开的站点和文章链接。可以把工具站、数据库、教程文章、博客和专题综述都收在这里，避免分散保存。
+            这一页集中整理数学相关的博客、主页、讲义、课程页面和专题索引。
+            先按主题做一个目录，后面再继续往里面补链接会比较清楚。
           </p>
           <div class="hero-inline-actions">
-            <a class="button" href="#link-sections">查看分类</a>
+            <a class="button" href="#catalog-nav">查看目录</a>
             <a class="button ghost" href="projects.html">返回集邮总览</a>
           </div>
         </div>
@@ -45,299 +46,833 @@
         </figure>
       </section>
 
-      <section class="content-grid" id="link-sections">
-        <article class="info-card resource-panel">
-          <h2>常用</h2>
-          <p>
-            从“课程和文章”和“工具”里挑了一批会高频打开的入口，先放在这里做快捷区。
+      <div class="links-layout" id="catalog-nav">
+        <section class="content-grid links-content" id="link-sections">
+          <article class="info-card resource-panel toc-card mobile-toc-card">
+            <h2>目录导航</h2>
+            <p class="catalog-lead">
+              桌面端右侧会显示悬浮目录，支持分组展开和收起。手机和平板上则在正文顶部显示这一份目录。
+            </p>
+            <details class="catalog-group" open>
+              <summary>
+                <span class="catalog-group-label">基础入口</span>
+                <span class="catalog-group-count">3</span>
+              </summary>
+              <div class="catalog-link-list">
+                <a class="catalog-link" href="#quick-links" data-target="quick-links">常用直达</a>
+                <a class="catalog-link" href="#course-reading" data-target="course-reading">课程 / 讲义 / 综合入口</a>
+                <a class="catalog-link" href="#tools-sites" data-target="tools-sites">工具 / 检索 / 计算</a>
+              </div>
+            </details>
+            <details class="catalog-group" open>
+              <summary>
+                <span class="catalog-group-label">研究方向</span>
+                <span class="catalog-group-count">3</span>
+              </summary>
+              <div class="catalog-link-list">
+                <a class="catalog-link" href="#analysis-pde" data-target="analysis-pde">分析 / PDE / 算子</a>
+                <a class="catalog-link" href="#comb-number" data-target="comb-number">组合 / 数论 / 调和分析</a>
+                <a class="catalog-link" href="#algebra-geometry" data-target="algebra-geometry">代数 / 几何 / 算术几何</a>
+              </div>
+            </details>
+            <details class="catalog-group" open>
+              <summary>
+                <span class="catalog-group-label">博客与杂项</span>
+                <span class="catalog-group-count">3</span>
+              </summary>
+              <div class="catalog-link-list">
+                <a class="catalog-link" href="#blogs-essays" data-target="blogs-essays">博客 / 杂谈 / 学习建议</a>
+                <a class="catalog-link" href="#olympiad-recreational" data-target="olympiad-recreational">竞赛 / 趣味数学</a>
+                <a class="catalog-link" href="#archives-misc" data-target="archives-misc">资料库 / 其他入口</a>
+              </div>
+            </details>
+          </article>
+
+          <article class="info-card resource-panel catalog-panel" id="quick-links">
+            <h2>常用直达</h2>
+            <p class="catalog-lead">
+              这里保留之前旧页里最常开的入口，适合平时快速打开。
+            </p>
+            <div class="page-links">
+              <a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer">Overleaf</a>
+              <a href="https://www.wolframalpha.com/examples/mathematics" target="_blank" rel="noopener noreferrer">WolframAlpha</a>
+              <a href="https://www.geogebra.org/cas" target="_blank" rel="noopener noreferrer">GeoGebra CAS</a>
+              <a href="https://ocw.mit.edu/courses/mathematics/" target="_blank" rel="noopener noreferrer">MIT Math OCW</a>
+              <a href="https://www.math.princeton.edu/undergraduate" target="_blank" rel="noopener noreferrer">Princeton Math UG</a>
+              <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+              <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arXiv</a>
+              <a href="https://www.3blue1brown.com/calculus" target="_blank" rel="noopener noreferrer">3Blue1Brown</a>
+            </div>
+            <div class="catalog-return">
+              <a href="#catalog-nav">返回目录</a>
+            </div>
+          </article>
+
+          <article class="info-card resource-panel catalog-panel" id="course-reading">
+            <h2>课程 / 讲义 / 综合入口</h2>
+            <p class="catalog-lead">
+              这部分保留之前旧页中的课程主页、课程总入口、讲义、考试和备考材料，不和下面的数学博客区冲突。
+            </p>
+            <ul class="resource-list">
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>课程总入口</h3>
+                  <p>如果想顺着一个学校的数学培养路径找课，这一组最省事，先从总入口再往下拆到具体课程。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://ocw.mit.edu/courses/mathematics/" target="_blank" rel="noopener noreferrer">MIT Math OCW</a>
+                  <a href="https://www.math.princeton.edu/undergraduate" target="_blank" rel="noopener noreferrer">Princeton Math UG</a>
+                  <a href="https://guide.berkeley.edu/courses/math/" target="_blank" rel="noopener noreferrer">Berkeley Math</a>
+                  <a href="https://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;page=0&amp;catalog=&amp;academicYear=&amp;q=MATH&amp;collapse=" target="_blank" rel="noopener noreferrer">Stanford Math</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>分析 / PDE</h3>
+                  <p>从 proof-based 分析一路接到测度和偏微分方程，适合做分析方向的主干入口。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/" target="_blank" rel="noopener noreferrer">MIT 18.100A</a>
+                  <a href="https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/" target="_blank" rel="noopener noreferrer">MIT 18.125</a>
+                  <a href="https://ocw.mit.edu/courses/18-152-introduction-to-partial-differential-equations-fall-2011/" target="_blank" rel="noopener noreferrer">MIT 18.152</a>
+                  <a href="https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-fall-2006/" target="_blank" rel="noopener noreferrer">MIT 18.303</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>数值分析 / 数值代数</h3>
+                  <p>这一组偏基础的 numerical analysis 和 numerical linear algebra，适合补浮点误差、插值、积分、线性方程组和迭代法这些核心内容。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2004/" target="_blank" rel="noopener noreferrer">MIT 18.330</a>
+                  <a href="https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/" target="_blank" rel="noopener noreferrer">MIT 18.335J</a>
+                  <a href="https://math.berkeley.edu/~mgu/MA128A2021S/" target="_blank" rel="noopener noreferrer">Berkeley Math 128A</a>
+                  <a href="https://math.berkeley.edu/~andrewshi/docs/Math%20128a%20Lecture%20Notes.pdf" target="_blank" rel="noopener noreferrer">128A Notes</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>ODE / PDE 数值解</h3>
+                  <p>偏向常微分方程和偏微分方程的数值求解，适合顺着 Euler / Runge-Kutta、稳定性分析、有限差分和 CFL 这些关键词继续往下找。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/pages/unit-i-first-order-differential-equations/numerical-methods/" target="_blank" rel="noopener noreferrer">MIT 18.03SC</a>
+                  <a href="https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/" target="_blank" rel="noopener noreferrer">MIT 18.085</a>
+                  <a href="https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/" target="_blank" rel="noopener noreferrer">MIT 18.336</a>
+                  <a href="https://math.berkeley.edu/~mgu/MA228A/index.html" target="_blank" rel="noopener noreferrer">Berkeley Math 228A</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>数值 PDE / 有限元 / 科学计算</h3>
+                  <p>这一组更偏 PDE 数值解的进阶入口，适合顺着 finite element、variational method、time stepping 和 scientific computing 往下挖。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://math.berkeley.edu/~wilken/275.F05/" target="_blank" rel="noopener noreferrer">Berkeley Math 275 FEM</a>
+                  <a href="https://math.berkeley.edu/~linlin/math275/" target="_blank" rel="noopener noreferrer">Berkeley Math 275</a>
+                  <a href="https://math.berkeley.edu/~bernd/math275old.html" target="_blank" rel="noopener noreferrer">Math 275 Archive</a>
+                  <a href="https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/" target="_blank" rel="noopener noreferrer">MIT 18.336</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>有限差分 / 谱方法 / 高阶格式</h3>
+                  <p>更偏 finite difference、spectral method 和高阶数值格式，适合继续往稳定性、收敛阶和离散化误差这些问题深挖。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://web.stanford.edu/class/cs237d" target="_blank" rel="noopener noreferrer">Stanford CS237D</a>
+                  <a href="https://web.stanford.edu/class/me470/" target="_blank" rel="noopener noreferrer">Stanford ME470</a>
+                  <a href="https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/" target="_blank" rel="noopener noreferrer">MIT 18.336</a>
+                  <a href="https://math.berkeley.edu/~mgu/MA228A/index.html" target="_blank" rel="noopener noreferrer">Berkeley Math 228A</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>数值优化</h3>
+                  <p>这一组保留优化方法和凸优化的常用入口，后面继续补教材、讲义和专题综述也顺手。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://math.berkeley.edu/~mgu/MA170/" target="_blank" rel="noopener noreferrer">Berkeley Math 170</a>
+                  <a href="https://math.berkeley.edu/~bernd/math170.html" target="_blank" rel="noopener noreferrer">Math 170 Archive</a>
+                  <a href="https://math.berkeley.edu/~linlin/math275/" target="_blank" rel="noopener noreferrer">Berkeley Math 275</a>
+                  <a href="https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/" target="_blank" rel="noopener noreferrer">MIT 15.053</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>随机过程 / 应用概率</h3>
+                  <p>如果后面想补 Markov chain、Brownian motion、Poisson process、martingale 或更偏建模的随机过程，这一组会更顺手。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/" target="_blank" rel="noopener noreferrer">MIT 18.445</a>
+                  <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/stochastic-processes/" target="_blank" rel="noopener noreferrer">MIT Stochastic Processes</a>
+                  <a href="https://web.stanford.edu/class/stats217/" target="_blank" rel="noopener noreferrer">Stanford Stats 217</a>
+                  <a href="https://web.stanford.edu/class/msande220/" target="_blank" rel="noopener noreferrer">Stanford MS&E 220</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>机器学习数学基础</h3>
+                  <p>这一组偏机器学习背后的概率、统计学习和优化基础，适合从应用数学视角往 ML 方向过渡。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://web.stanford.edu/class/cs229/" target="_blank" rel="noopener noreferrer">Stanford CS229</a>
+                  <a href="https://web.stanford.edu/class/stats315a/index.html" target="_blank" rel="noopener noreferrer">Stanford Stats 315A</a>
+                  <a href="https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006/" target="_blank" rel="noopener noreferrer">MIT 6.867</a>
+                  <a href="https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012/" target="_blank" rel="noopener noreferrer">MIT 15.097</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>代数</h3>
+                  <p>这一组偏代数一些。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://ocw.mit.edu/courses/18-701-algebra-i-fall-2010/" target="_blank" rel="noopener noreferrer">MIT 18.701</a>
+                  <a href="https://ocw.mit.edu/courses/18-785-number-theory-i-fall-2021/" target="_blank" rel="noopener noreferrer">MIT 18.785</a>
+                  <a href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/" target="_blank" rel="noopener noreferrer">MIT 18.04</a>
+                  <a href="https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/" target="_blank" rel="noopener noreferrer">MIT 18.901</a>
+                  <a href="https://ocw.mit.edu/courses/18-212-algebraic-combinatorics-spring-2019/" target="_blank" rel="noopener noreferrer">MIT 18.212</a>
+                  <a href="https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2003/" target="_blank" rel="noopener noreferrer">MIT 18.725</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>博士生资格考试</h3>
+                  <p>把数学系 PhD 阶段常见的 prelim、quals、generals 入口放在一起，后面查 syllabus、旧题和考试结构会更省事。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://math.berkeley.edu/programs/graduate/prelim-exams" target="_blank" rel="noopener noreferrer">Berkeley Prelim</a>
+                  <a href="https://math.berkeley.edu/graduate/phd-program/qualifying-exam" target="_blank" rel="noopener noreferrer">Berkeley QE</a>
+                  <a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/" target="_blank" rel="noopener noreferrer">Harvard Quals</a>
+                  <a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/some-old-qualifying-exams/" target="_blank" rel="noopener noreferrer">Harvard Old Exams</a>
+                  <a href="https://web.math.princeton.edu/generals/" target="_blank" rel="noopener noreferrer">Princeton Generals</a>
+                  <a href="https://mathematics.stanford.edu/academics/graduate-students/phd-program/phd-qualifying-exams" target="_blank" rel="noopener noreferrer">Stanford Qualifying Exams</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>旧题 / Syllabus / 备考材料</h3>
+                  <p>更适合临考前快速回看的入口，包含 syllabus、旧题库和标准题型说明。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://math.berkeley.edu/courses/archives/exams" target="_blank" rel="noopener noreferrer">Berkeley Exam Archive</a>
+                  <a href="https://math.berkeley.edu/~jchen/prelim/" target="_blank" rel="noopener noreferrer">Berkeley Prelim Workshop</a>
+                  <a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/the-qualifying-exam-syllabus/" target="_blank" rel="noopener noreferrer">Harvard Qual Syllabus</a>
+                  <a href="https://web.math.princeton.edu/generals/standard.html" target="_blank" rel="noopener noreferrer">Princeton Standard Questions</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>数学竞赛 / 丘成桐数学竞赛</h3>
+                  <p>丘成桐大学生数学竞赛官网里能直接找到赛制说明、报名页、下载区和应用与计算数学科目的 syllabus。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://yau-contest.com/en/page-Introduction.html" target="_blank" rel="noopener noreferrer">Yau Contest Intro</a>
+                  <a href="https://yau-contest.com/en/show-86-72.html" target="_blank" rel="noopener noreferrer">2025 Applied Track</a>
+                  <a href="https://yau-contest.com/uploads/allfiles/exam/SyllabusonComputationalandAppliedMathematics.pdf" target="_blank" rel="noopener noreferrer">Applied Syllabus</a>
+                  <a href="https://yau-contest.com/en/lists-jxxg.html" target="_blank" rel="noopener noreferrer">Downloads</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>讲义 / Notes / Archive</h3>
+                  <p>更适合平时反复回看的讲义入口，偏向数值分析、优化和有限元这些块。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/" target="_blank" rel="noopener noreferrer">MIT 18.335J Notes</a>
+                  <a href="https://math.berkeley.edu/~andrewshi/docs/Math%20128a%20Lecture%20Notes.pdf" target="_blank" rel="noopener noreferrer">128A Lecture Notes</a>
+                  <a href="https://math.berkeley.edu/~bernd/math170.html" target="_blank" rel="noopener noreferrer">Math 170 Archive</a>
+                  <a href="https://math.berkeley.edu/~bernd/math275old.html" target="_blank" rel="noopener noreferrer">Math 275 Archive</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>课程笔记 / 回看材料 / 题目</h3>
+                  <p>更适合补直觉、查讲义或做题，不完全是正式课程主页，但回看频率通常很高。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://www.math.princeton.edu/undergraduate/placement/MAT215" target="_blank" rel="noopener noreferrer">MAT215</a>
+                  <a href="https://www.math.princeton.edu/undergraduate/placement/MAT217" target="_blank" rel="noopener noreferrer">MAT217</a>
+                  <a href="https://tutorial.math.lamar.edu/" target="_blank" rel="noopener noreferrer">Paul's Notes</a>
+                  <a href="https://www.3blue1brown.com/lessons/eola-preview" target="_blank" rel="noopener noreferrer">3Blue1Brown</a>
+                  <a href="https://projecteuler.net/archives" target="_blank" rel="noopener noreferrer">Project Euler</a>
+                  <a href="https://artofproblemsolving.com/" target="_blank" rel="noopener noreferrer">AoPS</a>
+                </div>
+              </li>
+            </ul>
+            <div class="catalog-return">
+              <a href="#catalog-nav">返回目录</a>
+            </div>
+          </article>
+
+          <article class="info-card resource-panel catalog-panel" id="tools-sites">
+            <h2>工具 / 检索 / 计算</h2>
+            <p class="catalog-lead">
+              这部分也保留旧页的工具集合，写作、公式、绘图、符号计算、笔记和文献检索都在这里。
+            </p>
+            <ul class="resource-list">
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>LaTeX / 公式</h3>
+                  <p>写公式、查符号、在线编译最常用的一组工具，整理作业和课程讲义时会反复打开。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer">Overleaf</a>
+                  <a href="https://latex.codecogs.com/editor.html" target="_blank" rel="noopener noreferrer">CodeCogs</a>
+                  <a href="https://detexify.kirelabs.org/classify.html" target="_blank" rel="noopener noreferrer">Detexify</a>
+                  <a href="https://mathpix.com/mathpix-markdown" target="_blank" rel="noopener noreferrer">Mathpix Markdown</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>绘图 / CAS / 计算</h3>
+                  <p>适合画函数图像、看几何直观、做符号计算或临时验算，数学课和作业里都很好用。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://www.geogebra.org/graphing" target="_blank" rel="noopener noreferrer">GeoGebra Graphing</a>
+                  <a href="https://www.geogebra.org/cas" target="_blank" rel="noopener noreferrer">GeoGebra CAS</a>
+                  <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener noreferrer">Desmos</a>
+                  <a href="https://www.desmos.com/3d" target="_blank" rel="noopener noreferrer">Desmos 3D</a>
+                  <a href="https://www.wolframalpha.com/examples/mathematics" target="_blank" rel="noopener noreferrer">WolframAlpha</a>
+                  <a href="https://www.sagemath.org/eval.html" target="_blank" rel="noopener noreferrer">SageMathCell</a>
+                  <a href="https://www.symbolab.com/solver/matrix-calculator" target="_blank" rel="noopener noreferrer">Symbolab Matrix</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>Notebook / 草稿 / 在线运行</h3>
+                  <p>适合临时跑代码、写数值实验、整理计算草稿，或者把课程练习直接做成 notebook。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://cocalc.com/features/jupyter-notebook" target="_blank" rel="noopener noreferrer">CoCalc Jupyter</a>
+                  <a href="https://cocalc.com/features/latex-editor" target="_blank" rel="noopener noreferrer">CoCalc LaTeX</a>
+                  <a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Google Colab</a>
+                  <a href="https://app.diagrams.net/" target="_blank" rel="noopener noreferrer">diagrams.net</a>
+                  <a href="https://excalidraw.com/" target="_blank" rel="noopener noreferrer">Excalidraw</a>
+                  <a href="https://edtr.md/" target="_blank" rel="noopener noreferrer">edtr.io</a>
+                </div>
+              </li>
+
+              <li class="resource-item">
+                <div class="resource-copy">
+                  <h3>文献 / 引文 / 收藏</h3>
+                  <p>适合做文献检索、整理参考文献和迁移收藏夹，后面资料更多时这一块会越来越常用。</p>
+                </div>
+                <div class="resource-actions">
+                  <a href="https://zbib.org/" target="_blank" rel="noopener noreferrer">ZoteroBib</a>
+                  <a href="https://www.zotero.org/" target="_blank" rel="noopener noreferrer">Zotero</a>
+                  <a href="https://www.semanticscholar.org/" target="_blank" rel="noopener noreferrer">Semantic Scholar</a>
+                  <a href="https://raindrop.io/" target="_blank" rel="noopener noreferrer">Raindrop.io</a>
+                </div>
+              </li>
+            </ul>
+            <div class="catalog-return">
+              <a href="#catalog-nav">返回目录</a>
+            </div>
+          </article>
+
+          <article class="info-card resource-panel catalog-panel" id="analysis-pde">
+          <h2>分析 / PDE / 算子</h2>
+          <p class="catalog-lead">
+            这一组偏分析学、偏微分方程、概率与算子理论，适合作为课程、讲义和延伸阅读的入口。
           </p>
-          <div class="page-links">
-            <a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer">Overleaf</a>
-            <a href="https://www.wolframalpha.com/examples/mathematics" target="_blank" rel="noopener noreferrer">WolframAlpha</a>
-            <a href="https://www.geogebra.org/cas" target="_blank" rel="noopener noreferrer">GeoGebra CAS</a>
-            <a href="https://ocw.mit.edu/courses/mathematics/" target="_blank" rel="noopener noreferrer">MIT Math OCW</a>
-            <a href="https://www.math.princeton.edu/undergraduate" target="_blank" rel="noopener noreferrer">Princeton Math UG</a>
-            <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arXiv</a>
-            <a href="https://www.3blue1brown.com/calculus" target="_blank" rel="noopener noreferrer">3Blue1Brown</a>
+          <ul class="resource-list">
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Miles H. Wheeler</h3>
+                <p>英国 Bath 大学分析方向副教授，主页上有互动性很好的分析学基础教程。其中高等微积分一套内容和难度都比较接近 Baby Rudin。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://www.mileshwheeler.com/" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://www.mileshwheeler.com/ma30252/notes.html" target="_blank" rel="noopener noreferrer">高等微积分</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Lawrence Evans</h3>
+                <p>偏微分方程专家，伯克利主页上能找到控制论和 PDE 相关讲义，以及著作勘误。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://math.berkeley.edu/~evans/" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://en.wikipedia.org/wiki/Lawrence_C._Evans" target="_blank" rel="noopener noreferrer">简介</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Noncommutative Analysis</h3>
+                <p>Orr Shalit 的博客，主要有算子理论、算子代数和泛函分析方面的教学资源。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://noncommutativeanalysis.wordpress.com/" target="_blank" rel="noopener noreferrer">博客</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>zero and ones</h3>
+                <p>Paata Ivanishvili 的站点，内容主要是分析学，尤其偏概率论。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://extremal010101.wordpress.com" target="_blank" rel="noopener noreferrer">博客</a>
+              </div>
+            </li>
+          </ul>
+          <div class="catalog-return">
+            <a href="#catalog-nav">返回目录</a>
           </div>
-        </article>
+          </article>
 
-        <article class="info-card resource-panel">
-          <h2>课程和文章</h2>
-          <p>
-            把课程主页、课程总入口、讲义和适合反复回看的文章放到这一组，后面继续往纯数学方向补也方便。
+          <article class="info-card resource-panel catalog-panel" id="comb-number">
+          <h2>组合 / 数论 / 调和分析</h2>
+          <p class="catalog-lead">
+            这一组偏组合学、解析数论、加性组合和相关专题阅读材料，适合作为课程、讲义和论文导航。
           </p>
           <ul class="resource-list">
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>课程总入口</h3>
-                <p>如果想顺着一个学校的数学培养路径找课，这一组最省事，先从总入口再往下拆到具体课程。</p>
+                <h3>Yufei Zhao</h3>
+                <p>MIT 研究图论和加性组合的教授，主页上有一些组合学相关资料。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://ocw.mit.edu/courses/mathematics/" target="_blank" rel="noopener noreferrer">MIT Math OCW</a>
-                <a href="https://www.math.princeton.edu/undergraduate" target="_blank" rel="noopener noreferrer">Princeton Math UG</a>
-                <a href="https://guide.berkeley.edu/courses/math/" target="_blank" rel="noopener noreferrer">Berkeley Math</a>
-                <a href="https://explorecourses.stanford.edu/search?view=catalog&amp;filter-coursestatus-Active=on&amp;page=0&amp;catalog=&amp;academicYear=&amp;q=MATH&amp;collapse=" target="_blank" rel="noopener noreferrer">Stanford Math</a>
+                <a href="https://yufeizhao.com/" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://yufeizhao.com/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>分析 / PDE</h3>
-                <p>从 proof-based 分析一路接到测度和偏微分方程，适合做分析方向的主干入口。</p>
+                <h3>Robert Charles Vaughan</h3>
+                <p>宾夕法尼亚州立大学的解析数论专家，主页上有解析数论资源、课程、配套习题及解答。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/" target="_blank" rel="noopener noreferrer">MIT 18.100A</a>
-                <a href="https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/" target="_blank" rel="noopener noreferrer">MIT 18.125</a>
-                <a href="https://ocw.mit.edu/courses/18-152-introduction-to-partial-differential-equations-fall-2011/" target="_blank" rel="noopener noreferrer">MIT 18.152</a>
-                <a href="https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-fall-2006/" target="_blank" rel="noopener noreferrer">MIT 18.303</a>
+                <a href="https://personal.science.psu.edu/rcv4/" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://en.wikipedia.org/wiki/Bob_Vaughan" target="_blank" rel="noopener noreferrer">简介</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>数值分析 / 数值代数</h3>
-                <p>这一组偏基础的 numerical analysis 和 numerical linear algebra，适合补浮点误差、插值、积分、线性方程组和迭代法这些核心内容。</p>
+                <h3>Thomas Bloom</h3>
+                <p>曼彻斯特大学研究员，主攻加性数论和解析数论，主页上有相关教程、论文和笔记。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2004/" target="_blank" rel="noopener noreferrer">MIT 18.330</a>
-                <a href="https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/" target="_blank" rel="noopener noreferrer">MIT 18.335J</a>
-                <a href="https://math.berkeley.edu/~mgu/MA128A2021S/" target="_blank" rel="noopener noreferrer">Berkeley Math 128A</a>
-                <a href="https://math.berkeley.edu/~andrewshi/docs/Math%20128a%20Lecture%20Notes.pdf" target="_blank" rel="noopener noreferrer">128A Notes</a>
+                <a href="http://thomasbloom.org/index.html" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://en.wikipedia.org/wiki/Thomas_Bloom" target="_blank" rel="noopener noreferrer">简介</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>ODE / PDE 数值解</h3>
-                <p>偏向常微分方程和偏微分方程的数值求解，适合顺着 Euler / Runge-Kutta、稳定性分析、有限差分和 CFL 这些关键词继续往下找。</p>
+                <h3>Harmonic Analysis in Combinatorics and Additive Number Theory</h3>
+                <p>专门整理调和分析在组合学与加性数论中应用的页面，里面汇总了大量较前沿的学习材料。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/pages/unit-i-first-order-differential-equations/numerical-methods/" target="_blank" rel="noopener noreferrer">MIT 18.03SC</a>
-                <a href="https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/" target="_blank" rel="noopener noreferrer">MIT 18.085</a>
-                <a href="https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/" target="_blank" rel="noopener noreferrer">MIT 18.336</a>
-                <a href="https://math.berkeley.edu/~mgu/MA228A/index.html" target="_blank" rel="noopener noreferrer">Berkeley Math 228A</a>
+                <a href="https://mathweb.ucsd.edu/~fan/reading/ross/" target="_blank" rel="noopener noreferrer">专题页</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>数值 PDE / 有限元 / 科学计算</h3>
-                <p>这一组更偏 PDE 数值解的进阶入口，适合顺着 finite element、variational method、time stepping 和 scientific computing 往下挖，尤其适合偏计算和应用方向。</p>
+                <h3>Joni's Math Notes</h3>
+                <p>主要是加性数论、组合和解析数论相关笔记。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://math.berkeley.edu/~wilken/275.F05/" target="_blank" rel="noopener noreferrer">Berkeley Math 275 FEM</a>
-                <a href="https://math.berkeley.edu/~linlin/math275/" target="_blank" rel="noopener noreferrer">Berkeley Math 275</a>
-                <a href="https://math.berkeley.edu/~bernd/math275old.html" target="_blank" rel="noopener noreferrer">Math 275 Archive</a>
-                <a href="https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/" target="_blank" rel="noopener noreferrer">MIT 18.336</a>
+                <a href="https://jonismathnotes.blogspot.com/" target="_blank" rel="noopener noreferrer">博客</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>有限差分 / 谱方法 / 高阶格式</h3>
-                <p>这一组更偏 finite difference、spectral method 和高阶数值格式，适合继续往稳定性、收敛阶、离散化误差和计算实现这些问题深挖。</p>
+                <h3>Emmanuel Kowalski</h3>
+                <p>主页上有不少数论资料和 presentation，整体偏分析数论方向。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://web.stanford.edu/class/cs237d" target="_blank" rel="noopener noreferrer">Stanford CS237D</a>
-                <a href="https://web.stanford.edu/class/me470/" target="_blank" rel="noopener noreferrer">Stanford ME470</a>
-                <a href="https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/" target="_blank" rel="noopener noreferrer">MIT 18.336</a>
-                <a href="https://math.berkeley.edu/~mgu/MA228A/index.html" target="_blank" rel="noopener noreferrer">Berkeley Math 228A</a>
+                <a href="https://people.math.ethz.ch/~kowalski/" target="_blank" rel="noopener noreferrer">主页</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>数值优化</h3>
-                <p>这一组先放优化方法和凸优化的常用入口，优先挑了现在能稳定打开的课程主页，后面再补教材、讲义和专题综述也顺手。</p>
+                <h3>Gil Kalai</h3>
+                <p>组合学家 Gil Kalai 的博客，适合补组合学相关话题。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://math.berkeley.edu/~mgu/MA170/" target="_blank" rel="noopener noreferrer">Berkeley Math 170</a>
-                <a href="https://math.berkeley.edu/~bernd/math170.html" target="_blank" rel="noopener noreferrer">Math 170 Archive</a>
-                <a href="https://math.berkeley.edu/~linlin/math275/" target="_blank" rel="noopener noreferrer">Berkeley Math 275</a>
-                <a href="https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/" target="_blank" rel="noopener noreferrer">MIT 15.053</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>随机过程 / 应用概率</h3>
-                <p>如果后面想补 Markov chain、Brownian motion、Poisson process、martingale 或更偏建模的随机过程，这一组会更顺手。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/" target="_blank" rel="noopener noreferrer">MIT 18.445</a>
-                <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/resources/stochastic-processes/" target="_blank" rel="noopener noreferrer">MIT Stochastic Processes</a>
-                <a href="https://web.stanford.edu/class/stats217/" target="_blank" rel="noopener noreferrer">Stanford Stats 217</a>
-                <a href="https://web.stanford.edu/class/msande220/" target="_blank" rel="noopener noreferrer">Stanford MS&E 220</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>机器学习数学基础</h3>
-                <p>这一组偏机器学习背后的概率、统计学习和优化基础，适合从应用数学视角往 ML 方向过渡，不会只停留在工具层面。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://web.stanford.edu/class/cs229/" target="_blank" rel="noopener noreferrer">Stanford CS229</a>
-                <a href="https://web.stanford.edu/class/stats315a/index.html" target="_blank" rel="noopener noreferrer">Stanford Stats 315A</a>
-                <a href="https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006/" target="_blank" rel="noopener noreferrer">MIT 6.867</a>
-                <a href="https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012/" target="_blank" rel="noopener noreferrer">MIT 15.097</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>代数 / 纯数</h3>
-                <p>这一组偏纯数学一些，适合从代数、复分析、拓扑和代数几何继续往后接。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://ocw.mit.edu/courses/18-701-algebra-i-fall-2010/" target="_blank" rel="noopener noreferrer">MIT 18.701</a>
-                <a href="https://ocw.mit.edu/courses/18-785-number-theory-i-fall-2021/" target="_blank" rel="noopener noreferrer">MIT 18.785</a>
-                <a href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/" target="_blank" rel="noopener noreferrer">MIT 18.04</a>
-                <a href="https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/" target="_blank" rel="noopener noreferrer">MIT 18.901</a>
-                <a href="https://ocw.mit.edu/courses/18-212-algebraic-combinatorics-spring-2019/" target="_blank" rel="noopener noreferrer">MIT 18.212</a>
-                <a href="https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2003/" target="_blank" rel="noopener noreferrer">MIT 18.725</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>博士生资格考试</h3>
-                <p>把数学系 PhD 阶段常见的 prelim、quals、generals 入口放在一起，后面查 syllabus、旧题和考试结构时会比临时搜省事很多。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://math.berkeley.edu/programs/graduate/prelim-exams" target="_blank" rel="noopener noreferrer">Berkeley Prelim</a>
-                <a href="https://math.berkeley.edu/graduate/phd-program/qualifying-exam" target="_blank" rel="noopener noreferrer">Berkeley QE</a>
-                <a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/" target="_blank" rel="noopener noreferrer">Harvard Quals</a>
-                <a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/some-old-qualifying-exams/" target="_blank" rel="noopener noreferrer">Harvard Old Exams</a>
-                <a href="https://web.math.princeton.edu/generals/" target="_blank" rel="noopener noreferrer">Princeton Generals</a>
-                <a href="https://mathematics.stanford.edu/academics/graduate-students/phd-program/phd-qualifying-exams" target="_blank" rel="noopener noreferrer">Stanford Qualifying Exams</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>旧题 / Syllabus / 备考材料</h3>
-                <p>这一组把更适合临考前快速回看的入口单拎出来，包含 syllabus、旧题库和标准题型说明，查考试范围和题目风格会更直接。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://math.berkeley.edu/courses/archives/exams" target="_blank" rel="noopener noreferrer">Berkeley Exam Archive</a>
-                <a href="https://math.berkeley.edu/~jchen/prelim/" target="_blank" rel="noopener noreferrer">Berkeley Prelim Workshop</a>
-                <a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/the-qualifying-exam-syllabus/" target="_blank" rel="noopener noreferrer">Harvard Qual Syllabus</a>
-                <a href="https://web.math.princeton.edu/generals/standard.html" target="_blank" rel="noopener noreferrer">Princeton Standard Questions</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>数学竞赛 / 丘成桐数学竞赛</h3>
-                <p>这里单独放偏计算和应用方向也常会参考的竞赛入口。丘成桐大学生数学竞赛官网里能直接找到赛制说明、报名页、下载区和“应用与计算数学”科目的 syllabus，查范围比零散搜索省事很多。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://yau-contest.com/en/page-Introduction.html" target="_blank" rel="noopener noreferrer">Yau Contest Intro</a>
-                <a href="https://yau-contest.com/en/show-86-72.html" target="_blank" rel="noopener noreferrer">2025 Applied Track</a>
-                <a href="https://yau-contest.com/uploads/allfiles/exam/SyllabusonComputationalandAppliedMathematics.pdf" target="_blank" rel="noopener noreferrer">Applied Syllabus</a>
-                <a href="https://yau-contest.com/en/lists-jxxg.html" target="_blank" rel="noopener noreferrer">Downloads</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>讲义 / Notes / Archive</h3>
-                <p>更适合平时反复回看的讲义入口，偏向数值分析、优化和有限元这几块。比起只存课程主页，这组更像随手翻的资料架。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/" target="_blank" rel="noopener noreferrer">MIT 18.335J Notes</a>
-                <a href="https://math.berkeley.edu/~andrewshi/docs/Math%20128a%20Lecture%20Notes.pdf" target="_blank" rel="noopener noreferrer">128A Lecture Notes</a>
-                <a href="https://math.berkeley.edu/~bernd/math170.html" target="_blank" rel="noopener noreferrer">Math 170 Archive</a>
-                <a href="https://math.berkeley.edu/~bernd/math275old.html" target="_blank" rel="noopener noreferrer">Math 275 Archive</a>
-              </div>
-            </li>
-
-            <li class="resource-item">
-              <div class="resource-copy">
-                <h3>课程笔记 / 回看材料 / 题目</h3>
-                <p>更适合补直觉、查讲义或做题，不完全是正式课程主页，但回看频率通常很高。</p>
-              </div>
-              <div class="resource-actions">
-                <a href="https://www.math.princeton.edu/undergraduate/placement/MAT215" target="_blank" rel="noopener noreferrer">MAT215</a>
-                <a href="https://www.math.princeton.edu/undergraduate/placement/MAT217" target="_blank" rel="noopener noreferrer">MAT217</a>
-                <a href="https://tutorial.math.lamar.edu/" target="_blank" rel="noopener noreferrer">Paul's Notes</a>
-                <a href="https://www.3blue1brown.com/lessons/eola-preview" target="_blank" rel="noopener noreferrer">3Blue1Brown</a>
-                <a href="https://projecteuler.net/archives" target="_blank" rel="noopener noreferrer">Project Euler</a>
-                <a href="https://artofproblemsolving.com/" target="_blank" rel="noopener noreferrer">AoPS</a>
+                <a href="https://gilkalai.wordpress.com/" target="_blank" rel="noopener noreferrer">博客</a>
+                <a href="https://gilkalai.wordpress.com/" target="_blank" rel="noopener noreferrer">combinatorics and more</a>
               </div>
             </li>
           </ul>
-        </article>
+          <div class="catalog-return">
+            <a href="#catalog-nav">返回目录</a>
+          </div>
+          </article>
 
-        <article class="info-card resource-panel">
-          <h2>工具</h2>
-          <p>
-            把公式、绘图、计算、草稿、写作、文献和收藏工具收在一起，需要的时候直接进这一组找。
+          <article class="info-card resource-panel catalog-panel" id="algebra-geometry">
+          <h2>代数 / 几何 / 算术几何</h2>
+          <p class="catalog-lead">
+            这一组偏代数几何、算术几何和更广义的几何方向，适合从讲义、预印本和专题文章继续往后找。
           </p>
           <ul class="resource-list">
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>LaTeX / 公式</h3>
-                <p>写公式、查符号、在线编译最常用的一组工具，整理作业和课程讲义时会反复打开。</p>
+                <h3>Peter Scholze</h3>
+                <p>2018 年菲尔兹奖得主，研究方向为算术几何。主页上有一些论文预印本和相关讲义。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer">Overleaf</a>
-                <a href="https://latex.codecogs.com/editor.html" target="_blank" rel="noopener noreferrer">CodeCogs</a>
-                <a href="https://detexify.kirelabs.org/classify.html" target="_blank" rel="noopener noreferrer">Detexify</a>
-                <a href="https://mathpix.com/mathpix-markdown" target="_blank" rel="noopener noreferrer">Mathpix Markdown</a>
+                <a href="https://people.mpim-bonn.mpg.de/scholze/" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://en.wikipedia.org/wiki/Peter_Scholze" target="_blank" rel="noopener noreferrer">简介</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>绘图 / CAS / 计算</h3>
-                <p>适合画函数图像、看几何直观、做符号计算或临时验算，数学课和作业里都很好用。</p>
+                <h3>János Kollár</h3>
+                <p>代数几何学家，普林斯顿主页上有一些代数几何资源。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://www.geogebra.org/graphing" target="_blank" rel="noopener noreferrer">GeoGebra Graphing</a>
-                <a href="https://www.geogebra.org/cas" target="_blank" rel="noopener noreferrer">GeoGebra CAS</a>
-                <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener noreferrer">Desmos</a>
-                <a href="https://www.desmos.com/3d" target="_blank" rel="noopener noreferrer">Desmos 3D</a>
-                <a href="https://www.wolframalpha.com/examples/mathematics" target="_blank" rel="noopener noreferrer">WolframAlpha</a>
-                <a href="https://www.sagemath.org/eval.html" target="_blank" rel="noopener noreferrer">SageMathCell</a>
-                <a href="https://www.symbolab.com/solver/matrix-calculator" target="_blank" rel="noopener noreferrer">Symbolab Matrix</a>
+                <a href="https://web.math.princeton.edu/~kollar/" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://en.wikipedia.org/wiki/J%C3%A1nos_Koll%C3%A1r" target="_blank" rel="noopener noreferrer">简介</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>Notebook / 草稿 / 在线运行</h3>
-                <p>适合临时跑代码、写数值实验、整理计算草稿，或者把课程练习直接做成 notebook。</p>
+                <h3>David Mumford</h3>
+                <p>David Mumford 的个人数字学术档案，包含博客和文章，并且很多内容被作者无条件贡献到公共领域。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://cocalc.com/features/jupyter-notebook" target="_blank" rel="noopener noreferrer">CoCalc Jupyter</a>
-                <a href="https://cocalc.com/features/latex-editor" target="_blank" rel="noopener noreferrer">CoCalc LaTeX</a>
-                <a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Google Colab</a>
-                <a href="https://app.diagrams.net/" target="_blank" rel="noopener noreferrer">diagrams.net</a>
-                <a href="https://excalidraw.com/" target="_blank" rel="noopener noreferrer">Excalidraw</a>
-                <a href="https://edtr.md/" target="_blank" rel="noopener noreferrer">edtr.io</a>
+                <a href="https://www.dam.brown.edu/people/mumford/alg_geom/introAG.html" target="_blank" rel="noopener noreferrer">数字档案</a>
+                <a href="https://en.wikipedia.org/wiki/David_Mumford" target="_blank" rel="noopener noreferrer">简介</a>
               </div>
             </li>
 
             <li class="resource-item">
               <div class="resource-copy">
-                <h3>文献 / 引文 / 收藏</h3>
-                <p>适合做文献检索、整理参考文献和迁移收藏夹，后面资料更多时这一块会越来越常用。</p>
+                <h3>J. S. Milne</h3>
+                <p>主页上有很多代数、代数几何和算术几何内容，适合作为系统性的查阅入口。</p>
               </div>
               <div class="resource-actions">
-                <a href="https://zbib.org/" target="_blank" rel="noopener noreferrer">ZoteroBib</a>
-                <a href="https://www.zotero.org/" target="_blank" rel="noopener noreferrer">Zotero</a>
-                <a href="https://www.semanticscholar.org/" target="_blank" rel="noopener noreferrer">Semantic Scholar</a>
-                <a href="https://raindrop.io/" target="_blank" rel="noopener noreferrer">Raindrop.io</a>
+                <a href="https://www.jmilne.org/math/" target="_blank" rel="noopener noreferrer">主页</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Mikhael Gromov</h3>
+                <p>IHES 页面上有 Gromov 的一些讲义和文章，偏几何方向。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://www.ihes.fr/~gromov/recent/" target="_blank" rel="noopener noreferrer">主页</a>
+                <a href="https://en.wikipedia.org/wiki/Mikhael_Gromov_(mathematician)" target="_blank" rel="noopener noreferrer">简介</a>
               </div>
             </li>
           </ul>
-        </article>
-      </section>
+          <div class="catalog-return">
+            <a href="#catalog-nav">返回目录</a>
+          </div>
+          </article>
+
+          <article class="info-card resource-panel catalog-panel" id="blogs-essays">
+          <h2>博客 / 杂谈 / 学习建议</h2>
+          <p class="catalog-lead">
+            这一组偏博客、短文和学习建议，适合平时随手看，也适合拿来补视野和理解不同研究者的表达风格。
+          </p>
+          <ul class="resource-list">
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Terence Tao</h3>
+                <p>博客 What's new 上有介绍他自己工作的文章、课程讲义以及与数学学习相关的建议。更不那么正式的内容可以在 Mastodon 账号里看。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://terrytao.wordpress.com/" target="_blank" rel="noopener noreferrer">What's new</a>
+                <a href="https://mathstodon.xyz/@tao" target="_blank" rel="noopener noreferrer">Mastodon</a>
+                <a href="https://en.wikipedia.org/wiki/Terence_Tao" target="_blank" rel="noopener noreferrer">简介</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Secret Blogging Seminar</h3>
+                <p>一个有很多有趣数学理解文章的博客。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://sbseminar.wordpress.com/" target="_blank" rel="noopener noreferrer">博客</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>n-Category Cafe</h3>
+                <p>几个学者一起维护的数学博客。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://golem.ph.utexas.edu/category/" target="_blank" rel="noopener noreferrer">博客</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Chris Grossack</h3>
+                <p>博客里有很多有趣的数学小文章，特点是结合了代码和绘图，教育性很强。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://grossack.site/blog" target="_blank" rel="noopener noreferrer">博客</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Annoying precision</h3>
+                <p>Qiaochu Yuan 的博客。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://qchu.wordpress.com/" target="_blank" rel="noopener noreferrer">博客</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Timothy Gowers</h3>
+                <p>组合学与泛函分析学家 Gowers 的博客。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://gowers.wordpress.com/" target="_blank" rel="noopener noreferrer">博客</a>
+                <a href="https://en.wikipedia.org/wiki/Timothy_Gowers" target="_blank" rel="noopener noreferrer">简介</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Never ending books</h3>
+                <p>关于数学任务与数学史的博客。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="http://www.neverendingbooks.org/" target="_blank" rel="noopener noreferrer">博客</a>
+              </div>
+            </li>
+          </ul>
+          <div class="catalog-return">
+            <a href="#catalog-nav">返回目录</a>
+          </div>
+          </article>
+
+          <article class="info-card resource-panel catalog-panel" id="olympiad-recreational">
+          <h2>竞赛 / 趣味数学</h2>
+          <p class="catalog-lead">
+            这一组偏 IMO、奥赛讲义和趣味数学站点，适合平时做题、补题感和看题目讲解。
+          </p>
+          <ul class="resource-list">
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Dragomir Grozev</h3>
+                <p>博客 A point of view 主要关注 IMO 级别数学题目的理解。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://dgrozev.wordpress.com/" target="_blank" rel="noopener noreferrer">A point of view</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Math Olympiad teaching notes</h3>
+                <p>Po-Shen Loh 的 IMO 教学讲义和资源，更新到 2014 年。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://www.math.cmu.edu/~ploh/olympiad.shtml" target="_blank" rel="noopener noreferrer">讲义页</a>
+                <a href="https://en.wikipedia.org/wiki/Po-Shen_Loh" target="_blank" rel="noopener noreferrer">简介</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Evan Chen</h3>
+                <p>主页和博客里有不少关于 IMO 竞赛的讲义和资源。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://web.evanchen.cc/" target="_blank" rel="noopener noreferrer">博客</a>
+                <a href="https://web.evanchen.cc/" target="_blank" rel="noopener noreferrer">主页</a>
+              </div>
+            </li>
+
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>cut the knot</h3>
+                <p>一个收录了许多趣味数学谜题的网站。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://www.cut-the-knot.org/" target="_blank" rel="noopener noreferrer">网站</a>
+              </div>
+            </li>
+          </ul>
+          <div class="catalog-return">
+            <a href="#catalog-nav">返回目录</a>
+          </div>
+          </article>
+
+          <article class="info-card resource-panel catalog-panel" id="archives-misc">
+          <h2>资料库 / 其他入口</h2>
+          <p class="catalog-lead">
+            这一组放一些不太适合归入单一方向、但很值得长期保留的总入口和资料库。
+          </p>
+          <ul class="resource-list">
+            <li class="resource-item">
+              <div class="resource-copy">
+                <h3>Erdos 论文全集下载</h3>
+                <p>保留 Erdos 论文全集下载入口，适合作为专题查阅的总入口。</p>
+              </div>
+              <div class="resource-actions">
+                <a href="https://users.renyi.hu/~p_erdos/Erdos.html" target="_blank" rel="noopener noreferrer">论文全集</a>
+              </div>
+            </li>
+          </ul>
+          <div class="catalog-return">
+            <a href="#catalog-nav">返回目录</a>
+          </div>
+          </article>
+        </section>
+
+        <aside class="floating-catalog glass-panel" aria-label="右侧悬浮目录">
+          <div class="floating-catalog-head">
+            <div>
+              <p class="eyebrow">PAGE INDEX</p>
+              <h2>目录</h2>
+              <p class="floating-catalog-note">支持分组展开、当前分区高亮，也可以折叠整个目录。</p>
+            </div>
+            <button class="catalog-toggle" type="button" aria-expanded="true" aria-controls="floating-catalog-body">收起</button>
+          </div>
+          <div class="floating-catalog-body" id="floating-catalog-body">
+            <details class="catalog-group" open>
+              <summary>
+                <span class="catalog-group-label">基础入口</span>
+                <span class="catalog-group-count">3</span>
+              </summary>
+              <div class="catalog-link-list">
+                <a class="catalog-link" href="#quick-links" data-target="quick-links">常用直达</a>
+                <a class="catalog-link" href="#course-reading" data-target="course-reading">课程 / 讲义 / 综合入口</a>
+                <a class="catalog-link" href="#tools-sites" data-target="tools-sites">工具 / 检索 / 计算</a>
+              </div>
+            </details>
+            <details class="catalog-group" open>
+              <summary>
+                <span class="catalog-group-label">研究方向</span>
+                <span class="catalog-group-count">3</span>
+              </summary>
+              <div class="catalog-link-list">
+                <a class="catalog-link" href="#analysis-pde" data-target="analysis-pde">分析 / PDE / 算子</a>
+                <a class="catalog-link" href="#comb-number" data-target="comb-number">组合 / 数论 / 调和分析</a>
+                <a class="catalog-link" href="#algebra-geometry" data-target="algebra-geometry">代数 / 几何 / 算术几何</a>
+              </div>
+            </details>
+            <details class="catalog-group" open>
+              <summary>
+                <span class="catalog-group-label">博客与杂项</span>
+                <span class="catalog-group-count">3</span>
+              </summary>
+              <div class="catalog-link-list">
+                <a class="catalog-link" href="#blogs-essays" data-target="blogs-essays">博客 / 杂谈 / 学习建议</a>
+                <a class="catalog-link" href="#olympiad-recreational" data-target="olympiad-recreational">竞赛 / 趣味数学</a>
+                <a class="catalog-link" href="#archives-misc" data-target="archives-misc">资料库 / 其他入口</a>
+              </div>
+            </details>
+          </div>
+        </aside>
+      </div>
     </main>
   </div>
+  <script>
+    (() => {
+      const sections = Array.from(document.querySelectorAll(".catalog-panel[id]"));
+      const links = Array.from(document.querySelectorAll(".catalog-link[data-target]"));
+      const groups = Array.from(document.querySelectorAll(".catalog-group"));
+      const floatingCatalog = document.querySelector(".floating-catalog");
+      const floatingCatalogBody = document.querySelector(".floating-catalog-body");
+      const toggle = document.querySelector(".catalog-toggle");
+
+      const setActive = (id) => {
+        let floatingActiveLink = null;
+
+        groups.forEach((group) => group.classList.remove("active-group"));
+
+        links.forEach((link) => {
+          const isActive = link.dataset.target === id;
+          link.classList.toggle("is-active", isActive);
+
+          if (isActive) {
+            const group = link.closest("details");
+            if (group) {
+              group.open = true;
+              group.classList.add("active-group");
+            }
+
+            if (!floatingActiveLink && floatingCatalogBody && floatingCatalogBody.contains(link)) {
+              floatingActiveLink = link;
+            }
+          }
+        });
+
+        if (floatingActiveLink) {
+          floatingActiveLink.scrollIntoView({
+            block: "nearest",
+            behavior: "smooth"
+          });
+        }
+      };
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          setActive(link.dataset.target);
+        });
+      });
+
+      if (sections.length > 0) {
+        setActive(sections[0].id);
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const visible = entries
+              .filter((entry) => entry.isIntersecting)
+              .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+            if (visible) {
+              setActive(visible.target.id);
+            }
+          },
+          {
+            rootMargin: "-18% 0px -56% 0px",
+            threshold: [0.12, 0.24, 0.48]
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      }
+
+      if (toggle && floatingCatalog) {
+        toggle.addEventListener("click", () => {
+          const collapsed = floatingCatalog.classList.toggle("is-collapsed");
+          toggle.textContent = collapsed ? "展开" : "收起";
+          toggle.setAttribute("aria-expanded", String(!collapsed));
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
