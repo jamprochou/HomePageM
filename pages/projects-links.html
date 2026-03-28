@@ -33,7 +33,6 @@
           <h1>站点 / 文章</h1>
           <p class="subpage-lead">
             这一页集中整理数学相关的博客、主页、讲义、课程页面和专题索引。
-            先按主题做一个目录，后面再继续往里面补链接会比较清楚。
           </p>
           <div class="hero-inline-actions">
             <a class="button" href="#catalog-nav" data-open-catalog>查看目录</a>
@@ -51,7 +50,7 @@
           <article class="info-card resource-panel toc-card mobile-toc-card">
             <h2>目录导航</h2>
             <p class="catalog-lead">
-              桌面端右侧会显示吸附式目录，点击右侧手柄展开；手机和平板上则在正文顶部显示这一份目录。
+              <!-- 桌面端右侧会显示吸附式目录，点击右侧手柄展开；手机和平板上则在正文顶部显示这一份目录。 -->
             </p>
             <details class="catalog-group" open>
               <summary>
@@ -780,7 +779,6 @@
       const floatingCatalogBody = document.querySelector(".floating-catalog-body");
       const toggle = document.querySelector(".catalog-toggle");
       const openCatalogTriggers = Array.from(document.querySelectorAll("[data-open-catalog]"));
-      const desktopQuery = window.matchMedia("(min-width: 1280px)");
 
       const syncCatalogToggle = () => {
         if (!toggle || !floatingCatalog) {
@@ -861,17 +859,13 @@
 
       openCatalogTriggers.forEach((trigger) => {
         trigger.addEventListener("click", (event) => {
-          if (!floatingCatalog || !desktopQuery.matches) {
+          if (!floatingCatalog) {
             return;
           }
 
           event.preventDefault();
           floatingCatalog.classList.remove("is-collapsed");
           syncCatalogToggle();
-          document.querySelector("#catalog-nav")?.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
         });
       });
     })();
