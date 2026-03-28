@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/favicon.png?v=20260320b">
-  <link rel="stylesheet" href="../styles.css?v=20260328b">
+  <link rel="stylesheet" href="../styles.css?v=20260328k">
 </head>
 <body class="projects-page links-page">
   <div class="subpage-shell">
@@ -36,7 +36,7 @@
             先按主题做一个目录，后面再继续往里面补链接会比较清楚。
           </p>
           <div class="hero-inline-actions">
-            <a class="button" href="#catalog-nav">查看目录</a>
+            <a class="button" href="#catalog-nav" data-open-catalog>查看目录</a>
             <a class="button ghost" href="projects.html">返回集邮总览</a>
           </div>
         </div>
@@ -51,7 +51,7 @@
           <article class="info-card resource-panel toc-card mobile-toc-card">
             <h2>目录导航</h2>
             <p class="catalog-lead">
-              桌面端右侧会显示悬浮目录，支持分组展开和收起。手机和平板上则在正文顶部显示这一份目录。
+              桌面端右侧会显示吸附式目录，点击右侧手柄展开；手机和平板上则在正文顶部显示这一份目录。
             </p>
             <details class="catalog-group" open>
               <summary>
@@ -102,9 +102,6 @@
               <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
               <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arXiv</a>
               <a href="https://www.3blue1brown.com/calculus" target="_blank" rel="noopener noreferrer">3Blue1Brown</a>
-            </div>
-            <div class="catalog-return">
-              <a href="#catalog-nav">返回目录</a>
             </div>
           </article>
 
@@ -315,9 +312,6 @@
                 </div>
               </li>
             </ul>
-            <div class="catalog-return">
-              <a href="#catalog-nav">返回目录</a>
-            </div>
           </article>
 
           <article class="info-card resource-panel catalog-panel" id="tools-sites">
@@ -383,9 +377,6 @@
                 </div>
               </li>
             </ul>
-            <div class="catalog-return">
-              <a href="#catalog-nav">返回目录</a>
-            </div>
           </article>
 
           <article class="info-card resource-panel catalog-panel" id="analysis-pde">
@@ -436,9 +427,6 @@
               </div>
             </li>
           </ul>
-          <div class="catalog-return">
-            <a href="#catalog-nav">返回目录</a>
-          </div>
           </article>
 
           <article class="info-card resource-panel catalog-panel" id="comb-number">
@@ -521,9 +509,6 @@
               </div>
             </li>
           </ul>
-          <div class="catalog-return">
-            <a href="#catalog-nav">返回目录</a>
-          </div>
           </article>
 
           <article class="info-card resource-panel catalog-panel" id="algebra-geometry">
@@ -586,9 +571,6 @@
               </div>
             </li>
           </ul>
-          <div class="catalog-return">
-            <a href="#catalog-nav">返回目录</a>
-          </div>
           </article>
 
           <article class="info-card resource-panel catalog-panel" id="blogs-essays">
@@ -670,9 +652,6 @@
               </div>
             </li>
           </ul>
-          <div class="catalog-return">
-            <a href="#catalog-nav">返回目录</a>
-          </div>
           </article>
 
           <article class="info-card resource-panel catalog-panel" id="olympiad-recreational">
@@ -723,9 +702,6 @@
               </div>
             </li>
           </ul>
-          <div class="catalog-return">
-            <a href="#catalog-nav">返回目录</a>
-          </div>
           </article>
 
           <article class="info-card resource-panel catalog-panel" id="archives-misc">
@@ -744,20 +720,17 @@
               </div>
             </li>
           </ul>
-          <div class="catalog-return">
-            <a href="#catalog-nav">返回目录</a>
-          </div>
           </article>
         </section>
 
-        <aside class="floating-catalog glass-panel" aria-label="右侧悬浮目录">
+        <aside class="floating-catalog glass-panel is-collapsed" aria-label="右侧悬浮目录">
           <div class="floating-catalog-head">
             <div>
               <p class="eyebrow">PAGE INDEX</p>
               <h2>目录</h2>
               <!-- <p class="floating-catalog-note">支持分组展开、当前分区高亮，也可以折叠整个目录。</p> -->
             </div>
-            <button class="catalog-toggle" type="button" aria-expanded="true" aria-controls="floating-catalog-body">收起</button>
+            <button class="catalog-toggle" type="button" aria-expanded="false" aria-controls="floating-catalog-body" aria-label="展开或收起目录">目录</button>
           </div>
           <div class="floating-catalog-body" id="floating-catalog-body">
             <details class="catalog-group" open>
@@ -806,6 +779,18 @@
       const floatingCatalog = document.querySelector(".floating-catalog");
       const floatingCatalogBody = document.querySelector(".floating-catalog-body");
       const toggle = document.querySelector(".catalog-toggle");
+      const openCatalogTriggers = Array.from(document.querySelectorAll("[data-open-catalog]"));
+      const desktopQuery = window.matchMedia("(min-width: 1280px)");
+
+      const syncCatalogToggle = () => {
+        if (!toggle || !floatingCatalog) {
+          return;
+        }
+
+        const collapsed = floatingCatalog.classList.contains("is-collapsed");
+        toggle.textContent = collapsed ? "目录" : "收起";
+        toggle.setAttribute("aria-expanded", String(!collapsed));
+      };
 
       const setActive = (id) => {
         let floatingActiveLink = null;
@@ -866,12 +851,29 @@
       }
 
       if (toggle && floatingCatalog) {
+        syncCatalogToggle();
+
         toggle.addEventListener("click", () => {
-          const collapsed = floatingCatalog.classList.toggle("is-collapsed");
-          toggle.textContent = collapsed ? "展开" : "收起";
-          toggle.setAttribute("aria-expanded", String(!collapsed));
+          floatingCatalog.classList.toggle("is-collapsed");
+          syncCatalogToggle();
         });
       }
+
+      openCatalogTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", (event) => {
+          if (!floatingCatalog || !desktopQuery.matches) {
+            return;
+          }
+
+          event.preventDefault();
+          floatingCatalog.classList.remove("is-collapsed");
+          syncCatalogToggle();
+          document.querySelector("#catalog-nav")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        });
+      });
     })();
   </script>
 </body>

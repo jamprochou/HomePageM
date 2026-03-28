@@ -726,6 +726,7 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.9rem;
+  position: relative;
 }
 
 .floating-catalog h2 {
@@ -751,6 +752,7 @@ a {
   scrollbar-width: thin;
   scrollbar-color: rgba(13, 106, 103, 0.32) rgba(255, 255, 255, 0.28);
   scroll-behavior: smooth;
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
 .floating-catalog-body::-webkit-scrollbar {
@@ -799,6 +801,17 @@ a {
 .catalog-toggle:focus-visible {
   background: rgba(255, 255, 255, 0.92);
   border-color: rgba(199, 87, 50, 0.28);
+}
+
+.floating-catalog-head > div {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.floating-catalog.is-collapsed .floating-catalog-head > div,
+.floating-catalog.is-collapsed .floating-catalog-body {
+  opacity: 0;
+  transform: translateX(14px);
+  pointer-events: none;
 }
 
 .resource-list {
@@ -1308,7 +1321,7 @@ a {
 
 @media (min-width: 1280px) {
   .links-page .subpage-shell {
-    padding-right: 18rem;
+    padding-right: 0;
   }
 
   .mobile-toc-card {
@@ -1317,25 +1330,44 @@ a {
 
   .floating-catalog {
     position: fixed;
-    top: 7rem;
-    right: max(1rem, calc((100vw - var(--max-width)) / 2 + 1rem));
+    top: 7.4rem;
+    right: 0;
     display: flex;
     flex-direction: column;
-    width: 250px;
-    max-height: calc(100vh - 8.5rem);
-    padding: 1.15rem;
-    border-radius: 26px;
-    overflow: hidden;
-    z-index: 10;
+    width: min(310px, calc(100vw - 2.6rem));
+    max-height: calc(100vh - 9.2rem);
+    padding: 1.1rem 1rem 1rem 1.1rem;
+    border-radius: 28px 0 0 28px;
+    overflow: visible;
+    z-index: 20;
+    transform: translateX(0);
+    transition: transform 0.28s ease, box-shadow 0.24s ease, border-color 0.24s ease;
   }
 
   .floating-catalog.is-collapsed {
-    width: 168px;
+    transform: translateX(calc(100% - 0.7rem));
+    box-shadow: none;
   }
 
-  .floating-catalog.is-collapsed .floating-catalog-note,
-  .floating-catalog.is-collapsed .floating-catalog-body {
-    display: none;
+  .floating-catalog .catalog-toggle {
+    position: absolute;
+    top: 0.1rem;
+    left: -3.2rem;
+    width: 3rem;
+    min-height: 112px;
+    padding: 0.9rem 0.35rem;
+    border-radius: 18px 0 0 18px;
+    border-right: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(243, 248, 247, 0.9));
+    box-shadow: 0 18px 34px rgba(40, 31, 20, 0.1);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.18em;
+  }
+
+  .floating-catalog .catalog-toggle:hover,
+  .floating-catalog .catalog-toggle:focus-visible {
+    transform: translateX(-2px);
   }
 }
 
